@@ -1,0 +1,45 @@
+<html>
+
+<head>
+
+    <h6>Array with Js (Traversal)</h6>
+    <hr>
+    <script>
+        let data = [8, 4, 8, 12, 3, 45, 69, 45, 78, 96, 12, 30];
+        // travse
+
+        for (let i = 0; i < data.length; i++) {
+            document.write(`${i} is ${data[i]} <br>`);
+            // document.write('-------------------------------------- <br>');
+        }
+
+        // Access specific eelment
+            let x = 3;
+            document.write('-------------------------------------- <br>');
+            document.write(`${x} is ${data[x]}`+'<br>');
+            document.write('-------------------------------------- <br>');
+            // onclick access
+                function getElement(){
+                    let fn = document.getElementById('eelment').value
+                    // alert('true');
+                    if(fn < data.length && parseInt(fn) && fn > 0){
+                        // let fn = document.getElementById('eelment').value
+                    alert(' the data is : '+ data[fn]);
+                    }
+
+                    else{
+                        // document.write('invalid')
+                        alert('invalid')
+                    }
+                }
+        
+    </script>
+</head>
+
+<body>
+
+    <input type="text" id="eelment"/>
+    <button onclick="getElement()">Get Element</button>
+</body>
+
+</html>
