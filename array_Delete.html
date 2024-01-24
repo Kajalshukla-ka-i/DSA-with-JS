@@ -1,0 +1,34 @@
+<html>
+<p>
+<pre>
+Suppose we an array [9,7,58,12,78] and we want to delete an element from  array
+</pre>
+</p>
+
+<script>
+    let d_ele = [10, 89, 1, 2, 63, 45, 9];
+    let position = 2;
+    // let 
+    document.write('without using inbuilt function <br>');
+    document.write('========================================= <br>');
+
+    document.write('Before removing ' + d_ele + '<br>');
+    document.write('========================================= <br>');
+
+    console.log(d_ele);
+    for (let i = position; i < d_ele.length - 1; i++) {
+        console.log(d_ele[i])
+        document.write('array key :  ' + i + 'array element' + d_ele[i] + '<br>');
+
+        d_ele[i] = d_ele[i + 1];
+        // console.log(d_ele[i])
+    }
+    document.write('========================================= <br>');
+
+    d_ele.length = d_ele.length - 1;
+    document.write('After removing : ' + d_ele);
+    console.log(d_ele)
+
+</script>
+
+</html>
