@@ -12,10 +12,12 @@ Suppose we an array [30,7,9,5,1,6] and we want to add 70 at 3 place
         let add_val = 40;
         let position = 4;
         document.write('arraay_element : ' + arraay_element);
-        document.write('========================================= <br>');
+        document.write('<br> ========================================= <br>');
         console.log('array  : ' + arraay_element)
-        document.write('========================================= <br>');
         for (let i = arraay_element.length - 1; i >= 0; i--) {
+            document.write('array key : '+i+' -> arraay_element : ' + arraay_element[i] +'<br>');
+            document.write('========================================= <br>');
+
             console.log(i + ' : ' + arraay_element[i]);
             if (i >= position) {
                 arraay_element[i + 1] = arraay_element[i];
@@ -24,6 +26,7 @@ Suppose we an array [30,7,9,5,1,6] and we want to add 70 at 3 place
                 }
             }
         }
+
         console.log('new array : ' + arraay_element + '<br>');
         document.write('========================================= <br>');
 
@@ -48,11 +51,18 @@ Suppose we an array [30,7,9,5,1,6] and we want to add 70 at 3 place
         }
 
         console.log('using in built function (Splice  : )');
+        document.write('using in built function (Splice  : ) <br>');
+        document.write('insert 20 at index of 2 <br>');
+
         // Splice is used to insert 
         //   let  ab   =    arraay_element.slice(2,20);
         arraay_element.splice(2, 0, 20);
+        document.write('in built  : ' + arraay_element +'<br>');
+
+        document.write('========================================= <br>');
 
         console.log('inbuilt : ' + arraay_element);
+        
 
     </script>
 </head>
