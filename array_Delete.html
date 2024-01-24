@@ -42,12 +42,28 @@ Suppose we an array [9,7,58,12,78] and we want to delete an element from  array
         // let element = document.getElementById('element').value;
 
         console.log('position : ' + pos);
+        // for (let j = pos; j < d_ele_1.length - 1; j++) {
+        //     console.log(d_ele_1[j]);
+        //     d_ele_1[j] = d_ele_1[j + 1];
+        // }
+        // d_ele_1.length = d_ele_1.length - 1;
+        // console.log('element : ' + d_ele_1);
         for (let j = pos; j < d_ele_1.length - 1; j++) {
-            console.log(d_ele_1[j]);
+            console.log(d_ele_1[j])
+            document.write('array key :  ' + j + 'array element' + d_ele_1[j] + '<br>');
+
             d_ele_1[j] = d_ele_1[j + 1];
+            // console.log(d_ele_1[i])
         }
+        document.write('========================================= <br>');
+
         d_ele_1.length = d_ele_1.length - 1;
-        console.log('element : ' + d_ele_1);
+        document.write('After removing : ' + d_ele_1 + '<br>');
+        document.write('========================================= <br>');
+
+        document.write('========================================= <br>');
+
+        console.log(d_ele_1)
     }
 
 </script>
