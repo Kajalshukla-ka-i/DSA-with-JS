@@ -7,6 +7,8 @@ Suppose we an array [9,7,58,12,78] and we want to delete an element from  array
 
 <script>
     let d_ele = [10, 89, 1, 2, 63, 45, 9];
+    let d_ele_1 = [10, 89, 1, 2, 63, 45, 9];
+
     let position = 2;
     // let 
     document.write('without using inbuilt function <br>');
@@ -26,9 +28,35 @@ Suppose we an array [9,7,58,12,78] and we want to delete an element from  array
     document.write('========================================= <br>');
 
     d_ele.length = d_ele.length - 1;
-    document.write('After removing : ' + d_ele);
+    document.write('After removing : ' + d_ele + '<br>');
+    document.write('========================================= <br>');
+
+    document.write('========================================= <br>');
+
     console.log(d_ele)
 
+
+    //  
+    function delete_ele() {
+        let pos = document.getElementById('position').value;
+        // let element = document.getElementById('element').value;
+
+        console.log('position : ' + pos);
+        for (let j = pos; j < d_ele_1.length - 1; j++) {
+            console.log(d_ele_1[j]);
+            d_ele_1[j] = d_ele_1[j + 1];
+        }
+        d_ele_1.length = d_ele_1.length - 1;
+        console.log('element : ' + d_ele_1);
+    }
+
 </script>
+
+
+<body>
+    <input type="text" placeholder="Enter position ......." id="position">
+    <!-- <input type="text" placeholder="Enter element ......." id="element"> -->
+    <button onclick="delete_ele()">delete</button>
+</body>
 
 </html>
