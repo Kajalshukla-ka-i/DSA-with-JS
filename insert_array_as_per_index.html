@@ -1,0 +1,63 @@
+<!--
+Suppose we an array [30,7,9,5,1,6] and we want to add 70 at 3 place 
+// for this need to add 90 at 3 index and remaing will be moving ahead.
+// Suppose we an array [30,7,9,5,1,6] and we want to add 70 at 3 place
+    // for this need to add 90 at 3 index and remaing will be moving ahead.
+-->
+<html>
+
+<head>
+    <script>
+        let arraay_element = [60, 4, 7, 9, 6, 10];
+        let add_val = 40;
+        let position = 4;
+        document.write('arraay_element : ' + arraay_element);
+        document.write('========================================= <br>');
+        console.log('array  : ' + arraay_element)
+        document.write('========================================= <br>');
+        for (let i = arraay_element.length - 1; i >= 0; i--) {
+            console.log(i + ' : ' + arraay_element[i]);
+            if (i >= position) {
+                arraay_element[i + 1] = arraay_element[i];
+                if (i == position) {
+                    arraay_element[i] = add_val;
+                }
+            }
+        }
+        console.log('new array : ' + arraay_element + '<br>');
+        document.write('========================================= <br>');
+
+        function insert() {
+            let arvalue = [7, 5, 9, 8, 3, 5, 6];
+            let pos = document.getElementById('position').value;
+            console.log('position : ' + pos);
+            let el = document.getElementById('element').value;
+            console.log('element : ' + el);
+            for (let j = arvalue.length - 1; j >= 0; j--) {
+                console.log(j + ' : <-  ' + arvalue[j]);
+                if (j >= pos) {
+                    arvalue[j + 1] = arvalue[j];
+                    if (j == pos) {
+                        arvalue[j] = el;
+
+                    }
+                }
+            }
+            console.log('current arrya : ' + arvalue);
+            document.write('after button : ' + arvalue);
+        }
+
+        console.log('using in built function (Splice  : )');
+        // Splice is used to insert 
+        //   let  ab   =    arraay_element.slice(2,20);
+        arraay_element.splice(2, 0, 20);
+
+        console.log('inbuilt : ' + arraay_element);
+
+    </script>
+</head>
+<input type="text" placeholder="Enter position ......." id="position">
+<input type="text" placeholder="Enter element ......." id="element">
+<button onclick="insert()">Insert</button>
+
+</html>
