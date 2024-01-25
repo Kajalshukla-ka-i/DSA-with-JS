@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <h6>Array search using linear search</h6>
+    <script>
+        let array_element = [10, 20, 30, 14, 25, 36, 7];
+        let value = 20;
+        let index = undefined;
+        for (let i = 0; i <= array_element.length - 1; i++) {
+
+            console.log('array : ' + array_element[i]);
+            if (array_element[i] === value) {
+                index = i;
+
+                console.log('result : ' + array_element[i]);
+                console.log('index : ' + index);
+            }
+        }
+        console.log('by defualt function : ' + array_element.indexOf(value));
+        array_element.splice(2, 1);
+        console.log('after deleting by using splice   :  ' + array_element);
+        function search_data() {
+            let value = document.getElementById('position').value;
+            value = parseInt(value);
+            let index = undefined;
+            for (let i = 0; i <= array_element.length - 1; i++) {
+
+                console.log('array : ' + array_element[i]);
+                if (array_element[i] === value) {
+                    index = i;
+
+                    console.log('result : ' + array_element[i]);
+                    console.log('index : ' + index);
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <input type="text" placeholder="Enter element ......." id="position">
+    <button onclick="search_data()">Search</button>
+</body>
+
+</html>
