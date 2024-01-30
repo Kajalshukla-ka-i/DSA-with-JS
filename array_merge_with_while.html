@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <h5>Array Merge (Two) using while loop</h5>
+    <script>
+        <h6>     for this we need sorted array</h6>
+        let array_element_a = [10, 20, 30, 44, 55, 66, 77];
+        let array_element_b = [9, 19, 29, 33, 54];
+        let array_element_c = [];
+        document.write('array 1 : ' + array_element_a + '<br>');
+        document.write('array 2 : ' + array_element_b + '<br>');
+        let a = 0, b = 0, c = 0;
+        while (a < array_element_a.length && b < array_element_b.length) {
+            if (array_element_a[a] < array_element_b[b]) {
+                array_element_c[c] = array_element_a[a];
+                // c++;
+                a++;
+                console.log('a = ' + array_element_c[c]);
+            } else {
+                array_element_c[c] = array_element_b[b];
+                b++;
+                console.log('b = ' + array_element_c[c])
+            }
+            c++
+        }
+        console.log(a);
+        while (a < array_element_a.length) {
+            array_element_c[c] = array_element_a[a];
+            c++;
+            a++;
+        }
+        document.write('array 3  after merging array 1 and array 2  : ' + array_element_c + '<br>');
+        document.write('============================================== <br>');
+
+        console.log(array_element_c);
+
+
+
+    </script>
+</head>
+
+</html>
