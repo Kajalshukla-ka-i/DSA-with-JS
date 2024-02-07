@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <h4>Array Sorting with Bubble Sorting : </h4>
+    <script>
+        let data = [40, 30, 7, 89, 2,0,71];
+        console.log('data  :' + data);
+        for (i = 0; i < data.length; i++) {
+            // console.log('data of i  : ' + i);
+            for (j = 0; j < data.length; j++) {
+                // console.log('data of i  : ' + i);
+                // console.log(data);
+                if (data[j] > data[j + 1]) {
+                    // if (data[40] > data[30]) {
+                    //     let temp = data[40];
+                    //     data[40] = data[30];
+                    //     data[30]  = temp;
+                    // }
+                    let temp = data[j];
+                    data[j] = data[j + 1];
+                    data[j+1]  = temp;
+                    console.log(data);
+
+                }
+            }
+        }
+        console.log(data)
+    </script>
+
+</head>
+
+</html>
