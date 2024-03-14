@@ -1,0 +1,408 @@
+Component : 
+            Components are the building blocks that compose an application.
+               ->  A CSS selector that defines how the component is used in a template. HTML elements in your template that match this selector become instances of the component.
+
+               -> An HTML template that instructs Angular how to render the component
+
+               -> An optional set of CSS styles that define the appearance of the template's HTML elements
+
+Basic Command:
+               ng build
+               ng generate
+               ng test
+               ng e2e
+               ng serve
+               ng g c component_name
+               ng g m module_name
+               ng g c module_name/component_name
+
+
+Module  :
+             a place where you can group the components, directives, pipes, and services, which are related to the application. 
+             A complete feature
+                eg :  User Authentication  in which there is small component
+
+                Can we make module reusable , no becuase it lead to duplicacy
+                Component shuld be registered in imports under app.module.ts
+
+                command ng g m user-auth
+
+
+               Ng = Next Generation
+
+             command for component in Modules 
+                ng g c  module-name / component-name
+
+Events : 
+            events are a fundamental part of building dynamic web applications. Events can be triggered by user interactions such as clicks, keypresses, form submissions, and more. Handling these events is essential to create responsive and interactive user interfaces. 
+
+            for defining events
+                (click)="" -> when a user clicks on an element
+                (change)="" -> when the value of a form control (like a select dropdown or radio button) changes.
+                (submit)="" -> when a form is submitted. It,s typically used to handle form submissions and validation.
+                (input)="" -> when the value of an input element changes
+                (keyup)="" ->
+                (keydown)="" ->
+                (mouseenter)="" ->
+                (mouseover)="" ->
+                (mouseleave)="" ->
+                (focus)="" ->
+                (resize)="" ->
+                (blur)="" -> 
+             for getting value
+Input:  
+             <input type ="text" #box (keyup)="getData(box.value)" placeholder="event keyup"/>
+             we can used multiple event in signle element
+
+            Can we get value of property
+            ans yes we can  <button (click)="getvalues(box.name(property name))">click</button>
+            how many ways to get text value:
+                Two way binding
+                interpolation
+                Property Binding
+                ViewChild
+                ElementRef
+
+Styles:
+        Component Styles:  Applicable for only single component
+                            App Component -> using .css
+
+        Global Styles:  Applicable for enitre project
+                            Style.css
+
+        
+        Internal Styles: Applicable for component.html
+
+        prority of Style 1)  internal , 2) Component, 3)Global
+
+
+Property binding:  
+                    It is used to change attribute , property of html element.
+                    it provide boolean value
+                    we used [] for defing property binding
+
+                    interpolation accepts only string and numeric value 
+                    we used  {{}} for defining interpolation
+                    it does not support boolean value
+
+                    
+                     How to create show/hide button and elements using if-else(done)
+                     display data in template using various ways
+                     WAP which can used various events
+                     WAp using if , else if , switch, loop, nested loop
+
+                     can we uswed loop iside loop
+                     yes we can 
+
+                     Angular and javascript loop is same - no
+
+
+                     Style Binding :
+                                       Angular style binding is dynamic which you can also control from your typescript code.
+                                       Applying dynamic style to html template
+                                       syntax = [style.color="color"]
+
+
+                     can we used multiple style in single yes
+                     can we used property to multiple element yes
+
+
+Header : 
+
+Basic Form :
+               bootstrap : Application liabrayy for responsive ui
+               Search Angular with bootstrap / bootstrap with angluar
+               command for install
+                        ng add @ng-bootstrap/ng-bootstrap
+               changes after running above command :          
+                        Angular.json : in styles:[
+
+                        ]
+                        package.json : in 
+                        @angluar/localization
+                        @ng-bootstrap/ng-bootstrap
+                        bootstrap
+                        Polyfills :  angluar/localization
+                        package.lock.json breif 
+
+ app.module.ts  = import{NgModule} from @ng-bootstrap/ng-bootstrap
+                  imports[
+                     NgModule
+                  ]  // manual change after runnibg command
+
+bootstrap is library ya framework  - > bootstrap official website is shown library and in google is it called framework
+
+is  bootstrap Ui material - >  yes
+
+
+Material UI :
+                  To create responsive UI
+                  to make rich website
+                  to enhance website ui
+                  command
+                   : ng add @angluar/material
+                  angluar.json 
+                      styles[]
+
+                        package.json
+                        package-lock.json
+                        index.html
+                        style
+                        app.module.ts
+
+
+         Note  go with material.angluar.io
+
+         bootstrap vs material ui
+
+         responsive then bootstrap
+
+         for rich look material ui
+
+         using material ui effect performance
+          yes as it is heavier than bootstrap then it will take time
+
+
+
+important : 
+
+
+   send data parent to child component
+
+   for this we used Input decorator(in child component in .ts)
+
+   in export [
+      @Input() variable:datatype =''
+   ]
+   can we transfer multiple value ->yes
+   we used multiple component
+   we can update multiple component
+
+
+   Reusable Component
+
+child to parent
+
+   -> child component
+   ->  child in parent
+   ->  send funtion to child component
+         
+Two Way Binding:
+                  -> display and update property at Same time 
+                  ->is there any other way to binding data
+                        yes
+
+                        -> call data onchange function 
+                        and  display
+
+                        Property is name and  and using name like [(NgModule)]="name" is binding
+
+
+template referance variable ->
+                                 when we define a variable with # it is called template referance variable
+
+                                 what is type of referance type value :
+
+                                 for this we used HTMLInputElemet
+
+
+Typescript:
+
+
+         Advance and Extension version of javascript
+
+         when we typescript we deal with unwanted error
+          Browser does not understand typescript but angluar convert this into javascript
+         Basic type :
+            number
+            string
+            boolean
+            any
+            define 2 types (item: number | boolean)
+
+            how define type of object and array:
+               get(item:{name: string, age:number})
+               item: string[] = ['qwer','kjh','as'];
+            whenever we intialize any property it autometic set datatype as per value
+
+
+Pipes :  
+       simple functions to use in template expressions to accept an input value and return a transformed value
+        it transfer data format from one to another such as {{title | uppercase}}
+        it is used in html page  
+        we used (|) | in brackets 
+        we can create customise pipes
+        can pipes is mandotary : no not yet but it will helps to develop application easily
+        can we multiple pipes at same time -> yes
+
+        how to used with Title text  by using titlecase
+
+        how to create custom pipes -> 
+        using command :
+         n g p pipe_name
+
+Forms :
+         -> Submit any kind of information to Database
+         -> But angluar can not connent to Database
+         -> so we send data to API
+         -> And API update Database
+
+         such as
+           : Login
+           : Sign up
+           : Post
+           : google search
+         -> Types of Form
+               Template Driven Form :
+                        Mostly work done in the component template (component.html)
+               Reactive form:
+                        Mostly work done in component class (component.ts)
+
+         -> Data Flow with Forms
+                     Template->Class->Service->Database
+                     <html>    <ts>     <API>    DB  
+
+
+Template Driven Form  :
+              -> The forms which are handle in are template file
+               i.e ->  app.component.html
+
+               ->what kind of handling basiclay we do heavier
+                     : getting and setting of form value
+                     : apply validation
+                     : show error message
+
+            if we have button outside the form are we able to get the form from value -> yes
+             for this we need to call id of that form 
+             eg : 
+              <button (click)="loginser(loginForm.value)"></button>
+              if we dont give name of form thren we get error
+
+Reactive Forms :
+              -> For this first we need to import in module.ts file
+                : import{ReactiveFormsModule}from '@angular/forms';
+              -> And registered this in import[
+                     ReactiveFormsModule
+              ]
+              -> Register in component.ts
+                  import{FormControl,Form Group} from '@angluar/forms';
+               -> how to set by default value :
+                for this we need to define in {
+                      user:new FormControl('hello'),
+                }
+Directives : 
+            -> classes that can add new behavior to the elements in the template or modify existing behavior.
+               Such  as ngIf, ngSwitch
+            ->Types
+                 : attribute directives, 
+                 :structural directives, 
+                 : components. 
+            -> For making custom Directives we used 
+               ng g directives redEl or we can add directives folder (ng g directives Folder_name/redEl)
+            -> how to change a value of element using directives
+
+Routing :
+          ->Routing is the process of selecting and defining paths for IP-packet traffic within or    between networks as well as the process of managing network traffic overall. 
+          -> how to get value of form in url and display it in next page
+          ->  Dynamic Routing : routes are updated automatically
+          ->Static Routing: the path is updated by the user or an administrator, 
+
+Wild Card | 404 
+               -> When we hit invalid arument and page and not available this is 404
+               -> ** is called Wild card
+               -> To handle 404 we apply wild card
+
+Child Route : 
+             -> A child route is like any other route, in that it needs both a path and a component . The one difference is that you place child routes in a children array
+
+Service : 
+         -> Angular services provide a way for you to separate Angular app data and functions that can be used by multiple components 
+         -> services are mainly some classes , funtions, or data , and these can we used in multiple properties or in files.
+         -> A problem statement where we need services
+         -> for create services
+            ng g s / services servicename 
+            always create services in seprate folder
+            like ng g services Folder_name/servicename
+
+Model:
+      Basically It defines data
+      {
+         name: 'anil',
+         id:100
+
+      }
+      Model is part of Typescript its is functionality of typescript
+      we can create interface using interface keyword
+
+Routing Module :
+                The Router enables navigation by interpreting a browser URL as an instruction to change the view
+                This is helps to load route only when module call. 
+
+                command for this :
+                ng g m admin --routing
+
+Lazy Loading : 
+               -> a design pattern used to defer the initialization of modules until they are needed
+               -> Lazy loading is a technique for waiting to load certain parts of a webpage — especially images — until they are needed.
+               -> Lazy loading is a technique used in software          development, particularly in web and mobile applications, to improve performance and reduce initial loading times. It involves loading specific parts of an application on-demand rather than loading everything at once when the application starts. In the context of Angular, lazy loading is commonly used for optimizing large applications with multiple modules.
+               
+               eg :
+               we registered module in app-routing.module 
+                     ->   { path: 'lazy-feature', loadChildren: () => import('./lazy-feature/lazy-feature.module').then(m => m.LazyFeatureModule) }
+
+Automation Testing  :              
+        :   Manual Testing : 
+                ->  when a tester test manually project performance .
+                -> It will take too much time
+                -> Make test cases of all important functions
+                -> Run these test case with cmd 
+                -> In very quick time you will able to run all important feature of the project
+
+types of automation Testing
+
+1) unit test case
+2) Integration
+3) end to end
+
+Notes : 
+         -> We have a large application
+         ->Very useful to run test case before release
+
+         -> when we just start making application we should use manual Testing
+
+         -> We should not write a test case when a requirement changes rapidly
+
+         -> Angular Automation Testing
+          : Protractor - Run Test case on Browser
+          : Jasmine (framework)- Testing environment, Run Spec file for test case
+          : Karma - Run test case in multiple browser
+
+LocalStorage:
+               -> LocalStorage allows you to store key-value pairs in a web browser with no expiration time. The data remains even after the browser is closed.
+
+               -> It's suitable for storing data that you want to persist across sessions or page reloads.
+               
+               -> The data is accessible across different tabs and windows of the same browser, but it's restricted to the same domain.
+
+Session Storage:
+                  -> Session Storage, like LocalStorage, stores key-value pairs, but the data is available only for the duration of the page session.
+
+                  -> When the user closes the tab or the browser, the data is deleted. It's essentially a short-term storage mechanism.
+
+                  -> Session Storage is also limited to the same domain but is not shared between tabs or windows.
+
+   Why we need nodejs for Angular:
+   Angular does not need Node.js directly and it is not mandatory to use Node.js. But you will need Node.js for all the build and development tools.
+
+   For an example these are few reasons that you need Node.js for building an Angular app,
+
+   npm (node package manager) comes with Node.js by default and it allows you to manage your dependencies. So, you don’t have to worry for operations like adding a dependency, removing some, updating your package.json.
+
+   npm gives you angular cli or ng cli (angular command-line interface) which is a great tool for building your application easily
+
+   Node.js allows you to spin up a lightweight web server to host your application locally in your system.
+    becuase nodejs provide npm which provide liabrary and packages require for angualr project
+    Browser understand javascript only hence Node js provide typescript transpiler which is used to complie typescript into javascript
+
+    Angular chache :  used for speed up the loading.
+    

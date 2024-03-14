@@ -1,0 +1,109 @@
+Node js Key point
+======================================
+
+What is Node js ?
+
+    This is not an programming language but Node js internally used javascript to run its code.
+    This is a server enviroment it have extra feature than javascript like databse connection , APIs Integration,File System.
+    Node js is Totally free and this is open source.
+    Node js basically used V8 engine to execute the code. in that engine we used the javascript.
+==================================
+
+Why do we used Node 
+
+    Node js mostly used for APIs
+    So we can connect the same databse with web App, Mobile App
+    Node is easy to understand who know javascript
+    Node is superfast for APIs
+========================================
+Javascript & Node are the Same ?
+
+    Javascript and Node js Code Syntax is same
+    But bith are not exactly same
+    In javascript  we cannot to DB but Node we can
+    Node js run on server side and javascript run on browser 
+
+============================================
+
+Major Topic : 
+
+What is Node js
+How it works
+Install and run
+Make Basic API
+use with express.js
+UI with Node:
+  UI Event
+  Forms
+  WebPages etc 
+
+Node js Event
+Middleware
+Major Package
+Connect with DB
+Make major API
+API security and Token
+API validation
+Project
+Live with server
+ 
+==========================================
+
+Client and Server sides
+
+                    Request
+Client    ---------------------------->     Server
+   |       <--------------------------        |
+   |               Response                   |
+   |                                        Node Js
+Javascript,
+HTML
+CSS
+
+Where do we used Node js 
+    We used node js on server side because it connect with database and file system and all and javascript used Client
+
+How node js used javascript 
+     
+         chrome                                                                 Node js
+         | |                                                                      |  |   
+results  | | Javascript code                                 Javascript code      |  |  results
+         | |                                                                      |  |
+        =================================================================================
+                                         Writte in c++
+
+    In actually chrome browser we have V8 engine that can execute javascript code and in the sam eway node is basicallypresent on the server side but node js also have the this V8 engine. So that we can write any code it execute this javascript code and then on that way node js basically used the javascript. and its on serverside that by it connect with database and file system also.
+
+=========================================================
+
+What developer Make with Node js
+    developers Make API with Node js
+    so we can connect server with Client
+    Node can make API for web, Android and IOS etc.
+    Make can also make website
+
+==================================================
+
+What developer Make  with Node js?
+
+    Web App , Mobile App,<-> (server) <-> File server , database
+
+================================================
+
+Why used npm 
+    The version of npm and node will different.
+    It is a node Package manager . it is helping tool.
+    when we Install node js npm is automatically installed. It is different from node.
+    The full Forms of npm is Node Package manager so when we to installed extra Package or external liberay  in our project.
+
+===================================================
+
+Recommended Code Editor 
+ we can used any editor but following are recommended 
+    VS code (free)
+    Atom  (free)
+    Webstom (paid) 
+    Sublime (paid)
+
+
+
